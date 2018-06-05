@@ -4,71 +4,61 @@
     <title>Guessing Game</title>
 
     <!-- Bootstrap and CSS here-->
-    <style>
-      .center {
-        text-align: center;
-      }
-      ul {
-          list-style: none;
-          padding: 0;
-      }
-      img {
-          display: inline;
-          width: 200px;
-          height: 100px;
-      }
-      #footer {
-          width: 100%;
-          border-top: solid 2px black;
-          background-color: white;
-          position: fixed;
-          bottom: 0;
-      }
-    </style>
-
+    <link rel='stylesheet' type='text/css' href='style.css'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
   </head>
   <body>
 
-      <div id='app'>
+      <div id='app' class='container'>
 
-        <div id='headers'>
-          <!-- Title and subtitles! -->
+        <div id='headers' >
+          <h1 id='name-of-game' class="text-center">Play the Guessing Game!</h1>
+          <h3 id='instructions' class="text-center">Guess a number between 1-100!</h3>
         </div>
 
         <div id='main'>
           <div id='input-parent'>
-            <!-- Player's guess input, and submit button -->
+              <input id="new-guess" placeholder="#" maxlength='3' autofocus=autofocus ></input>
+              <button id="Go-button" class='btn btn-lg btn-secondary' class="rounded-circle">Go!</button>
           </div>
 
-          <div id='guesses'>
-            <!-- unordered list of guesses -->
+          <div id='guesses' class='text-center' >
+              <ul id='guess-list'>
+                  <li class='guess'>-</li>
+                  <li class='guess'>-</li>
+                  <li class='guess'>-</li>
+                  <li class='guess'>-</li>
+                  <li class='guess'>-</li>
+              </ul>
+                
           </div>
 
-          <div id="menu-btns">
-            <!-- reset and hint buttons -->
+          <div id="menu-btns" class='text-center'>
+                <button id="reset-button" class='btn btn-lg btn-secondary'>Reset</button>
+                <button id="hint-button" class='btn btn-lg btn-secondary'>Hint</button>
           </div>
         </div>
       </div>
 
 
 
-    <div id='footer'>
-        <div>
-          <div class=''>
-            <img src='fsa_logo.png'></img>
+      <div id='footer' class='container' class="fixed-bottom" >
+          <div class="row align-items-center">
+            <div class='col-4'>
+              <aside><img src='fsa_logo.png' class='img-fluid'></img></aside>
+            </div>
+
+            <div class="col-4" >
+              <h5 class="text-center" m=>Project by Cang Truong</h5>
+            </div>
+
+            <div class='col-4'>
+              <aside><img src='grace_hopper_academy_logo.png' class='img-fluid'></img></aside>
+            </div>
           </div>
+      </div>
 
-          <div class=''>
-            <h4>Project by Cang Truong</h4>
-          </div>
-
-          <div class=''>
-            <img src='grace_hopper_academy_logo.png'></img>
-          </div>
-
-
-        </div>
-    </div>
 
   </body>
 </html>
