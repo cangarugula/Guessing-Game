@@ -22,17 +22,14 @@ img {
     position: fixed;
     bottom: 0;
 }
+
 li {
     display: inline-block;
     margin: 0 10px;
 }
 #input-parent {
-    width: 160px;
+    padding: 30px;
     margin: 0 auto;
 }
-.footerlogo {
-    float: left; 
-    width: 33%;
-    margin: 0 auto; 
-}
+
   
