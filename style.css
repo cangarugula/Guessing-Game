@@ -4,10 +4,11 @@ text-align: center;
 }
 .guesses {
     text-align: center;
+    display: inline-block;
 }
 ul {
     list-style: inline-block;
-    padding: 0;
+    padding: 20px;
 }
 img {
     display: inline;
@@ -25,11 +26,49 @@ img {
 
 li {
     display: inline-block;
-    margin: 0 10px;
+    margin: 10px;
+    border: solid 1px gray;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 15mm;
+    line-height: 30px;
+    background-color: white;
 }
 #input-parent {
-    padding: 30px;
-    margin: 0 auto;
+    text-align: center;
+    padding: 60px;
+    margin: 50px;
+    position: relative;
+
 }
 
-  
+#input-box {
+    border-radius: 100px;
+    width: 125px;
+    height: 125px;
+    position: absolute;
+    font-size: 50px;
+    top: 10%;
+    right:46%;
+}
+
+#Go-button {
+
+    border-radius: 100px;
+    padding: 10px;
+    font-size: 5mm;
+
+    background-color: green;
+    position: absolute;
+    top: 70%;
+    right: 45%;
+    
+}
+#menu-btns {
+    padding: 30px;
+}
+
+#app {
+    background-image: url(http://lmms.info/wp-content/uploads/2016/12/vault-door-for-top-round-vault-door-12.jpg);
+    background-size: cover
+}
