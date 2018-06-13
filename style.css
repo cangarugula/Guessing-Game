@@ -22,6 +22,7 @@ img {
     background-color: white;
     position: fixed;
     bottom: 0;
+    z-index: 100;
 }
 
 li {
@@ -33,6 +34,7 @@ li {
     font-size: 15mm;
     line-height: 30px;
     background-color: white;
+    box-shadow: 10px
 }
 #input-parent {
     text-align: center;
@@ -60,7 +62,7 @@ li {
 
     background-color: green;
     position: absolute;
-    top: 70%;
+    top: 80%;
     right: 45%;
     
 }
@@ -68,7 +70,8 @@ li {
     padding: 30px;
 }
 
-#app {
-    background-image: url(http://lmms.info/wp-content/uploads/2016/12/vault-door-for-top-round-vault-door-12.jpg);
+#app{
+    background-image: url(shutterstock_vault_bank_door.jpg);
+    background-repeat: no-repeat;
     background-size: cover
 }
