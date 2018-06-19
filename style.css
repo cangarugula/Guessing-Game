@@ -1,8 +1,8 @@
 
 .center {
-text-align: center;
+    text-align: center;
 }
-.guesses {
+.guess-list {
     text-align: center;
     display: inline-block;
 }
@@ -23,6 +23,7 @@ img {
     position: fixed;
     bottom: 0;
     z-index: 100;
+    position: absolute;
 }
 
 li {
@@ -75,16 +76,16 @@ li {
 body {
     background-image: url(lollipops_background.png);
     background-repeat: repeat;
-    position: absolute;
-    width: 100%
 }
 
-.headers {
-    position: relative;
-    top: 15px;
-    left: 25%;
+#headers {
     padding: 10px;
-    width: 700px;
     background-color: rgba(256, 256, 256, 0.5)
+}
 
+#owl {
+    position: relative;
+    bottom: 60px;
+    left: 0px;
+    size: 30px
 }
