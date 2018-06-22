@@ -8,41 +8,36 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
   </head>
   <body>
-      <script src="jquery-3.3.1.min.js"></script>  
-      <script src="GuessingGame.js"></script>
 
       <div id='app'>
 
         <div id='headers'class='text-center'>
-          <h1 id='name-of-game' class="text-center">Journey to the Center of a Lollipop</h1>
-          <h3 id='instructions' class="text-center">Guess how many licks it takes to get to the center!</h3>
+          <h1 id='title' class="text-center">Journey to the Center of a Lollipop</h1>
+          <h3 id='subtitle' class="text-center">Guess how many licks it takes to get to the center!</h3>
         </div>
 
         <div id='main'>
 
           <div id='input-parent'>
               <input id="input-box" class='text-center' placeholder="#" maxlength='3' autofocus=autofocus ></input>
-              <button id="Go-button" button type="submit" class='btn btn-md btn-success' class="rounded-circle">Go!</button>
+              <button id="submit" button type="submit" class='btn btn-md btn-success' class="rounded-circle">Go!</button>
           </div>
 
           <div id='guess-list' class='text-center' >
               <ul id='guesses' >
-                  <li id='guess1'>-</li>
-                  <li id='guess2'>-</li>
-                  <li id='guess3'>-</li>
-                  <li id='guess4'>-</li>
-                  <li id='guess5'>-</li>
+                  <li class='guess'>-</li>
+                  <li class='guess'>-</li>
+                  <li class='guess'>-</li>
+                  <li class='guess'>-</li>
+                  <li class='guess'>-</li>
               </ul>
                 
           </div>
 
-          <div id="owl">
-              <aside><img src='owl.png' class='img-fluid'></img></aside>
-          </div>
 
           <div id="menu-btns" class='text-center'>
-                <button id="reset-button" class='btn btn-md btn-secondary'>Reset</button>
-                <button id="hint-button" class='btn btn-md btn-warning'>Hint</button>
+                <button id="reset" class='btn btn-md btn-secondary'>Reset</button>
+                <button id="hint" class='btn btn-md btn-warning'>Hint</button>
           </div>
           <span></span>
 
@@ -67,6 +62,9 @@
             </div>
           </div>
       </div>
+
+      <script src="jquery-3.3.1.min.js"></script>  
+      <script src="GuessingGame.js"></script>
 
   </body>
 </html>

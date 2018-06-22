@@ -98,10 +98,57 @@ function newGame(){
 
 
 
-$(document).ready(function(){
-  $("button").on("click",function(event){
-      let submission = $("input").val();
-      $("guess1")
-      
-  })
- })
+$(document).ready(function() { console.log('hello') });
+
+let game = new Game()
+
+let logSubmission = function(){
+    let submission = Number($("input").val())
+    let outcome = game.playersGuessSubmission(submission)
+    if(outcome === 'You have already guessed that number.'){
+        $("#title").text("Guess Again!")
+    } else if(outcome === "You Lose." || outcome === "You Win!"){
+        $("#title").text(outcome)
+        $("#subtitle").text("Reset the game and play again!")
+        $("#submit").prop('disabled',true)
+        $("#hint").prop('disabled',true)
+    } else {
+        $("#title").text(outcome)
+        if(game.isLower()){
+            $("#subtitle").text("You need more licks than that!")
+        } else {
+            $("#subtitle").text("The lollipop's not that big")
+        }
+    }
+
+    let guessList = document.body.getElementsByClassName("guess")
+    for(let i = 0; i < game.pastGuesses.length; i++){
+        $(guessList[i]).text(game.pastGuesses[i])
+    }
+    $("input").val("")
+}
+
+$("#reset").on("click",function resetGame(){
+    game = new Game()
+    $("#title").text("Journey to the Center of a Lollipop")
+    $("#subtitle").text("Guess how many licks it takes to get to the center!")
+    $("li").text("-")
+    $("#submit").prop('disabled',false)
+    $("#hint").prop('disabled',false)
+})
+
+$("#hint").on("click",function getHints(){
+    $("#title").text("The winning numbers are " + game.provideHint().join(", "))
+
+})
+
+$("#submit").on("click",function(){
+    if($("#submit").prop('disabled') !== true){
+        logSubmission()
+    }
+})
+$("#input-box").keypress(function(event){
+    if(event.keyCode == "13" && $("#submit").prop('disabled') !== true){
+        logSubmission()
+    }
+})
