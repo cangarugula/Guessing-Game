@@ -31,7 +31,8 @@ li {
     border: solid 1px gray;
     border-radius: 5px;
     padding: 20px;
-    font-size: 15mm;
+    font-size: 12mm;
+    font-family: cursive;
     line-height: 30px;
     background-color: white;
     box-shadow: 10px
@@ -50,6 +51,7 @@ li {
     height: 125px;
     position: absolute;
     font-size: 50px;
+    font-family: cursive;
     top: 10%;
     right:46%;
 }
@@ -59,7 +61,7 @@ li {
     border-radius: 100px;
     padding: 10px;
     font-size: 5mm;
-
+    font-family: cursive;
     background-color: green;
     position: absolute;
     top: 80%;
@@ -68,6 +70,7 @@ li {
 }
 
 #menu-btns{
+    font-family: cursive;
     padding: 20px;
     margin: 20px;
 }
@@ -82,4 +85,10 @@ body {
     background-color: rgba(256, 256, 256, 0.5)
 }
 
+#title {
+    font-family: cursive;
+}
 
+#subtitle {
+    font-family: cursive;
+}
