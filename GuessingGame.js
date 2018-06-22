@@ -57,16 +57,16 @@ Game.prototype.checkGuess = function(){
         } else {
             
             if(Math.abs(this.playersGuess - this.winningNumber) < 10){
-                return "You're burning up!"
+                return "Almost to the center!"
             }
             if(Math.abs(this.playersGuess - this.winningNumber) < 25){
-                return "You're lukewarm."
+                return "You're getting there"
             }
             if(Math.abs(this.playersGuess - this.winningNumber) < 50){
-                return "You're a bit chilly."
+                return "You have many licks ahead of you"
             }
             if(Math.abs(this.playersGuess - this.winningNumber) < 100){
-                return "You're ice cold!"
+                return "You're just licking the wrapper"
             }
         }
     
